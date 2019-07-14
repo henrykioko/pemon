@@ -1,0 +1,554 @@
+*{
+
+	margin:0;
+	padding:0;
+	box-sizing: border-box;
+
+}
+
+body{
+
+	font-family: "lato", san-serif;
+
+	font-weight:400;
+	font-size:16px;
+	line-height: 1.7;
+	color: red;
+	padding: 30px;
+}
+
+.header{
+
+	height: 95vh;
+	background-image: linear-gradient(to right bottom,
+		rgba(169,169,169,.1),
+		rgba(169,169,169,.1)),
+	url(images/trampoline.jpg);
+	background-size: cover;
+	background-position:top;
+	-o-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+	clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+}
+.logo-box{
+
+	position: relative;
+	top: 40px;
+	left: 40px;
+}
+.logo{
+	height: 35px;
+}
+.logo:hover{
+	animation: moveinright 1s ease-out;
+}
+.text-box{	
+	position: relative;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	text-align: center;
+
+}
+.heading-primary{
+	color: #fff;
+	text-transform: uppercase;
+	padding-bottom: 60px;
+
+}
+.heading-primary-main{
+	display: block;
+	font-size: 60px;
+	font-weight: 400;
+	letter-spacing: 35px;
+	animation-name: moveinleft;
+	animation-duration: 2s;
+	animation-timing-function: ease-in; 
+
+}
+.heading-primary-sub{
+	display:block;
+	color: dodgerblue;
+	font-size: 30px;
+	font-weight: 700;
+	letter-spacing: 15px;
+	animation-name: moveinright;
+	animation-duration: 2s;
+	animation-timing-function: ease-in; 
+}
+
+@keyframes moveinleft{
+	
+	0%{
+		opacity: 0;
+		transform: translateX(-100px);
+	}		
+	80%{
+		transition: translateX(10px);
+
+	}
+100%{
+	opacity: 1;
+	transform: translateX(10px);
+}
+}
+
+
+@keyframes moveinright{
+	
+	0%{
+		opacity: 0;
+		transform: translateX(100px);
+		transform: rotate(90deg);
+	}		
+	80%{
+		transition: translateX(10px);
+		transform: rotate(-90deg);
+
+	}
+	100%{
+	opacity: 1;
+	transform: translateX(10px);
+}
+}
+
+@keyframes moveinbottom{
+	
+	0%{
+		opacity: 0;
+		transform: translateY(-100px);
+		transform: rotate(90deg);
+	}		
+	80%{
+		transition: translateX(10px);
+		transform: rotate(-90deg);
+
+	}
+100%{
+	opacity: 1;
+	transform: translateX(10px);
+}
+}
+
+/*.btn:link, .btn:visited{
+	text-transform: uppercase;
+	text-decoration: none;
+	padding: 15px 40px;
+	display: inline-block;
+	transition: all .5s;
+	position: relative;
+
+}
+
+.btn:hover{
+	transform: translateY(-3px);
+	box-shadow: 0 20px 20px rgba(0,0,0,0.6);
+}
+.btn:active{
+
+	transform: translateY(-1px);
+	box-shadow: 0 20px 20px rgba(0,0,0.6);
+	background-color: brown;
+}
+
+.btn-white{
+
+	background-color: dodgerblue;
+	color: #777;
+	border-radius: 100px;
+}
+
+.btn::after{
+	content: "";
+	display: inline-block;
+	height: 100%;
+	width: 100%;
+	border-radius: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: -1;
+	transition: all .4s;
+}
+
+.btn-white::after{
+
+	background-color: dodgerblue;
+
+}
+
+.btn:hover::after{
+	transform: scale(1.4);
+	opacity: 0;
+}
+
+.animated-btn{
+
+	animation: moveinbottom 2s ease-in .7s;
+
+	animation-fill-mode: backwards;
+}*/
+
+
+
+
+/*.......................Scroll bar.................*/
+
+section
+{
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	
+}
+.scrolldown
+{
+	position: absolute;
+	bottom: 20px;
+	top: 40px;
+	left: 50%;
+	width: 40px;
+	height: 40px;
+	background: rgba(0,0,0, 0);
+	transform: translateY(-80px) translateX(-50%) rotate(45deg);
+}
+
+.scrolldown span
+{
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: block;
+	width: 100%;
+	height: 100%;
+	border-bottom:  2px solid #fff;
+	border-right: 2px solid #fff;
+	animation: animates 1.5s linear infinite;
+	opacity: 0;
+}
+
+.scrolldown span:nth-child(1)
+{
+	transform: translate(-15px, -15px);
+	animation-delay: -.4s;
+
+}
+
+.scrolldown span:nth-child(2)
+{
+	transform: translate(0,0);
+	animation-delay: -.2s;
+}
+.scrolldown span:nth-child(3)
+{
+	transform: translate(15px, 15px);
+	animation-delay: 0s;
+}
+
+@keyframes animates
+{
+	0%{
+		top: -5%;
+		left: -5px;
+		opacity: 0;
+	}
+
+	25%{
+		top: 0%;
+		left: 0px;
+		opacity: 1;
+	}
+
+	50%,100%{
+		top: 5%;
+		left: 5px;
+		opacity: 0;
+	}
+}
+
+
+
+/*.................sections...............*/
+
+#section-c
+{
+	display: flex;
+	padding: 20px;
+
+
+}
+
+#section-c .box-1, #section-c .box-3
+{
+	background: #926239;
+	color: #fff;
+}
+#section-c .box-3:hover
+{
+	background:dodgerblue;	
+	
+
+}
+
+#section-c .box-1:hover
+{
+	background:dodgerblue;	
+	
+
+}
+
+#section-c .box-2:hover
+{
+	background-image: linear-gradient(to right bottom,
+		rgba(169,169,169,.7),
+		rgba(169,169,169,.7)),
+	url(images/car.jpg);
+	background-size: cover;
+	color: #090909;
+	
+
+}
+
+#section-c .box-2
+{
+	background: #f9f9f9;
+	border: #926fff 1px solid;
+	padding: 5px;
+	margin: 5px;
+	
+}
+#about
+{
+	display: inline-flex;
+	padding: 0;
+
+
+}
+h2
+{
+	font-size: 20px;
+}
+.uzito
+{
+	text-align: center;
+}
+
+#about .box-1
+{
+	background: #fff;
+	color: #000;
+
+}
+
+#about .box-2
+{
+
+	
+
+}
+
+.shenzi
+{
+
+	height: 340px;
+	width: 540px;
+}
+
+#offer
+{
+	display: inline-flex;
+	color: #000;
+	background: dodgerblue;
+}
+
+.none
+{
+	list-style: none;
+}
+
+li{
+	padding: 0 20px;
+	margin: 5px
+}
+
+
+.face-img
+{
+	height: 240px;
+	width: 240px;
+}
+
+#offer .box1
+{
+	
+}
+
+.wazito-img
+{
+	height: 350px;
+	width: 350px;
+}
+
+.headbouncy
+{
+	font-style: italic;
+	font-size: 50px;
+}
+
+/*.carousel
+{
+	background: #000;
+}*/
+
+.base-img
+{
+	height: 330px;
+	width: 550px;
+}
+
+.base1-img
+{
+	height: 350px;
+	width: 550px;
+	padding-top: 40px;
+}
+
+
+#offer2
+{
+	padding: 15px;
+	margin: 15px;
+	display: flex;
+	color: black;
+	/*background: dodgerblue;*/
+}
+
+
+.muthoni
+{
+	background-image: linear-gradient(to right bottom,
+		rgba(169,169,169,0),
+		rgba(169,169,169,0)),
+	url(images/mwisho.jpg);
+	padding-top: 30px;
+	margin-top: 30px;
+	color: #090909;
+	background-size: cover;
+}
+
+.endp
+{
+	font-size: 20px;
+	padding-top: 30px;
+	margin-top: 30px;
+	margin-left: 600px;
+	text-align: left;
+	
+}
+
+.henryfooter
+{
+	background: black;
+	padding-top: 20px;
+	margin-top: 20px;
+	display: flex;
+	height: 300px;
+	/*display: contents;*/
+}
+
+
+
+
+
+
+/*........................hover for footer effects.....................*/
+
+
+
+
+
+
+#swag
+{
+	position: absolute;
+	/*top: 50%;*/
+	/*left: 50%;*/
+	/*transform: translate(-50%,-50%);*/
+	margin: ;
+	padding: 0;
+	/*display: flex;*/
+
+}
+
+#swag li
+{
+	list-style: none;
+	transition: .1s;
+
+}
+
+#swag li a
+{
+	/*position: relative;*/
+	display: block;
+	/*text-align: center;*/
+	/*margin: 20px 0;*/
+	color: #fff;
+	/*font-size: 40px;*/
+	text-decoration: none;
+	text-transform: uppercase;
+
+}
+
+#swag:hover li
+{
+	opacity: .2;
+
+}
+
+#swag li:hover
+{
+	opacity: 1;
+}
+
+#swag li:hover
+{
+	color: #ff0;
+}
+
+.copysection
+{
+	background: #0f0fff;
+}
+
+.tired
+{
+	
+	background: #0f0fff;
+	display: inline-flex;
+}
+
+.partners
+{
+	display: flex;
+	padding: 0 155px;
+	margin: 0 155px;
+}
+
+.partners-img
+{
+		height: 150px;
+		width: 270px
+		/*padding: 5px;
+		margin: 5px;*/
+}
+
+.partners:hover
+{
+	z-index: .3;
+}
+.partners-img:hover
+{
+	transform: scale(1.3);
+	z-index: 1;
+}
